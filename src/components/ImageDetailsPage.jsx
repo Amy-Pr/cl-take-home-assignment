@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function ImageDetailsPage({ artwork }) {
+export function ImageDetailsPage({ artwork, onBackClick }) {
 	return (
 		<div>
 			<h2>{artwork.title}</h2>
@@ -9,6 +9,7 @@ export function ImageDetailsPage({ artwork }) {
 				alt={artwork.thumbnail.alt_text}
 				src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
 			/>
+			<button onClick={onBackClick}>Back to results</button>
 		</div>
 	);
 }

@@ -7,7 +7,7 @@ import { Footer } from './Footer';
 import './App.css';
 
 export function App() {
-	const [data, setData] = useState();
+	const [data, setData] = useState([]);
 
 	function onSearchSubmit(query) {
 		// Search for the users's query.
@@ -25,10 +25,18 @@ export function App() {
 	return (
 		<div className="App">
 			<h1>TCL Career Lab Art Finder</h1>
-			<SearchForm onSearchSubmit={onSearchSubmit} />
-			<ul>
-				<li>This is placeholder text</li>
-			</ul>
+			<>
+				<SearchForm onSearchSubmit={onSearchSubmit} />
+				<ul>
+					{data.map(({ artist_title, id, title }) => (
+						<li key={id}>
+							<h3>
+								{title}, by {artist_title}
+							</h3>
+						</li>
+					))}
+				</ul>
+			</>
 			<Footer />
 		</div>
 	);

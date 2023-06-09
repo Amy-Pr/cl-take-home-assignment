@@ -34,7 +34,7 @@ export function App() {
 				/>
 			) : (
 				<>
-					<SearchForm onSearchSubmit={onSearchSubmit} />a
+					<SearchForm onSearchSubmit={onSearchSubmit} />
 					<ul>
 						{data.map(({ image_id, artist_title, title }) => (
 							<li

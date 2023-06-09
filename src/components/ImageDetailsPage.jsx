@@ -1,11 +1,14 @@
 import React from 'react';
 
-export function ImageDetailsPage() {
+export function ImageDetailsPage({ artwork }) {
 	return (
 		<div>
-			<h1>Title</h1>
-			<p>Artist name</p>
-			<img />
+			<h2>{artwork.title}</h2>
+			<p>{artwork.artist_title}</p>
+			<img
+				alt={artwork.thumbnail.alt_text}
+				src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
+			/>
 		</div>
 	);
 }

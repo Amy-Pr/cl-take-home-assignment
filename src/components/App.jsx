@@ -7,6 +7,8 @@ import { Footer } from './Footer';
 import './App.css';
 
 export function App() {
+	const [data, setData] = useState();
+
 	function onSearchSubmit(query) {
 		// Search for the users's query.
 		// TODO: render the results, instead of logging them to the console.
@@ -15,7 +17,8 @@ export function App() {
 		// our UI, we need to make real requests!
 		// @see: ./src/api.js
 		searchArtworks(query).then((json) => {
-			console.log(json);
+			// console.log(json.data);
+			setData(json.data);
 		});
 	}
 

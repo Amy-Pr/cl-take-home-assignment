@@ -19,9 +19,9 @@ export function App() {
 		});
 	}
 
-	// function onBackClick() {
-	// 	setSelectedArtwork(null);
-	// }
+	function onBackClick() {
+		setSelectedArtwork(null);
+	}
 
 	return (
 		<div className="App">
@@ -30,7 +30,7 @@ export function App() {
 			{selectedArtwork ? (
 				<ImageDetailsPage
 					artwork={data.find((artwork) => artwork.image_id === selectedArtwork)}
-					// onBackClick = {onBackClick}
+					onBackClick={onBackClick}
 				/>
 			) : (
 				<>

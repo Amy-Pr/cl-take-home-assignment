@@ -23,6 +23,9 @@ export function App() {
 		<div className="App">
 			<h1>TCL Career Lab Art Finder</h1>
 			<SearchForm onSearchSubmit={onSearchSubmit} />
+			<ul>
+				<li>This is placeholder text</li>
+			</ul>
 			<Footer />
 		</div>
 	);
